@@ -7,7 +7,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "user")
-//使用JPA作为实体类的持久化，默认视同hibernate，忽略以下两个无须的json化属性
+//使用JPA简化数据库操作，默认使用hibernate，实体类会被代理类继承并添加以下两个无须的属性，转化成Json对象，因此可以忽略
 @JsonIgnoreProperties({"handler", "hibernateLazyInitializer"})
 @Data
 public class User {

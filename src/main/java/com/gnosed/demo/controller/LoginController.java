@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.servlet.http.HttpSession;
 import java.util.Objects;
 
 @Controller
@@ -21,7 +22,7 @@ public class LoginController {
     @CrossOrigin
     @PostMapping(value = "api/login")
     @ResponseBody
-    public Result login(@RequestBody User requestUser) {
+    public Result login(@RequestBody User requestUser, HttpSession session) {
         String username = requestUser.getUsername();
         String password = requestUser.getPassword();
         User user = userService.get(username, password);
@@ -33,6 +34,8 @@ public class LoginController {
             return new Result(400);
         }*/
         if (user != null) {
+            //保持登录状态
+            session.setAttribute("user", user);
             return new Result(200);
         } else {
             return new Result(400);

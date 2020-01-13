@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="2594f1d1-b0df-467e-9c02-a3e5b0292251" name="Default Changelist" comment="add vue">
+      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/MavenWrapperDownloader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/gnosed/demo/mapper/UserMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/gnosed/demo/pojo/Book.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/gnosed/demo/pojo/Category.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/gnosed/demo/service/IUserService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/gnosed/demo/service/IUserServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/gnosed/demo/util/ExceptionUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/gnosed/demo/util/StringUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application-dev.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application-prod.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application-test.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/db/demo.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/logback-spring.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/static/js/app.dad25ae60e5fc663f04f.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/static/js/app.dad25ae60e5fc663f04f.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/static/js/vendor.059d3742d8ed439efd19.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/static/js/vendor.059d3742d8ed439efd19.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/gnosed/demo/mapper/UserMapperTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gnosed/demo/DemoApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gnosed/demo/DemoApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gnosed/demo/config/LoginConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gnosed/demo/config/LoginConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gnosed/demo/constant/Constant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gnosed/demo/constant/Constant.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gnosed/demo/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gnosed/demo/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gnosed/demo/dao/UserDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gnosed/demo/pojo/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gnosed/demo/pojo/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gnosed/demo/service/UserService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sqlScript/sql.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/static/fonts/element-icons.535877f.woff" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/static/fonts/element-icons.535877f.woff" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/static/fonts/element-icons.732389d.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/static/fonts/element-icons.732389d.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/gnosed/demo/DemoApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/gnosed/demo/DemoApplicationTests.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+        <option value="JUnit4 Test Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="S:/Java/apache-maven-3.6.3" />
+        <option name="userSettingsFile" value="S:\Java\apache-maven-3.6.3\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+        <option name="vmOptionsForImporter" value="-Xmx768m" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1VYAicLCxQYZY0aofLIOUuribb1" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
+    <property name="extract.method.default.visibility" value="private" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/mapper" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.gnosed.demo.mapper" />
+      <recent name="com.gnosed.demo.service.impl" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\MyCode\IdeaProjects\demo\src\main\resources\mapper" />
+      <recent name="F:\MyCode\IdeaProjects\demo\src\main\resources" />
+      <recent name="F:\MyCode\IdeaProjects\demo\src\main\resources\static" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.gnosed.demo.service" />
+      <recent name="com.gnosed.demo.util" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.DemoApplication">
+    <configuration name="DemoApplicationTests.connectDb" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.gnosed.demo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.gnosed.demo" />
+      <option name="MAIN_CLASS_NAME" value="com.gnosed.demo.DemoApplicationTests" />
+      <option name="METHOD_NAME" value="connectDb" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="IUserServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.gnosed.demo.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.gnosed.demo.service" />
+      <option name="MAIN_CLASS_NAME" value="com.gnosed.demo.service.IUserServiceTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="IUserServiceTest.get" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.gnosed.demo.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.gnosed.demo.service" />
+      <option name="MAIN_CLASS_NAME" value="com.gnosed.demo.service.IUserServiceTest" />
+      <option name="METHOD_NAME" value="get" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserMapperTest.getById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.gnosed.demo.mapper.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.gnosed.demo.mapper" />
+      <option name="MAIN_CLASS_NAME" value="com.gnosed.demo.mapper.UserMapperTest" />
+      <option name="METHOD_NAME" value="getById" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserMapperTest.list" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="demo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.gnosed.demo.mapper.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.gnosed.demo.mapper" />
+      <option name="MAIN_CLASS_NAME" value="com.gnosed.demo.mapper.UserMapperTest" />
+      <option name="METHOD_NAME" value="list" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DemoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="demo" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.gnosed.demo.DemoApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.UserMapperTest.getById" />
+        <item itemvalue="JUnit.UserMapperTest.list" />
+        <item itemvalue="JUnit.IUserServiceTest.get" />
+        <item itemvalue="JUnit.IUserServiceTest" />
+        <item itemvalue="JUnit.DemoApplicationTests.connectDb" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2594f1d1-b0df-467e-9c02-a3e5b0292251" name="Default Changelist" comment="" />
+      <created>1577419782604</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1577419782604</updated>
+      <workItem from="1577419785089" duration="2734000" />
+      <workItem from="1577430277701" duration="81000" />
+      <workItem from="1577433560085" duration="21000" />
+      <workItem from="1577930062249" duration="5209000" />
+      <workItem from="1577947867936" duration="1073000" />
+      <workItem from="1577948948007" duration="2442000" />
+      <workItem from="1577960231453" duration="10000" />
+      <workItem from="1578021183129" duration="782000" />
+      <workItem from="1578535670639" duration="6287000" />
+      <workItem from="1578557390886" duration="8073000" />
+      <workItem from="1578617790873" duration="3222000" />
+      <workItem from="1578623837088" duration="56000" />
+      <workItem from="1578627215072" duration="2663000" />
+      <workItem from="1578630482657" duration="801000" />
+      <workItem from="1578638179992" duration="8595000" />
+      <workItem from="1578833089065" duration="307000" />
+      <workItem from="1578878613131" duration="18488000" />
+    </task>
+    <task id="LOCAL-00001" summary="demo project">
+      <created>1578538118336</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1578538118336</updated>
+    </task>
+    <task id="LOCAL-00002" summary="demo project">
+      <created>1578538605205</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1578538605205</updated>
+    </task>
+    <task id="LOCAL-00003" summary="add vue">
+      <created>1578544341575</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1578544341575</updated>
+    </task>
+    <task id="LOCAL-00004" summary="前后端整合后拦截器">
+      <created>1578564196694</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1578564196694</updated>
+    </task>
+    <task id="LOCAL-00005" summary="update">
+      <created>1578630621537</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1578630621537</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="demo project" />
+    <MESSAGE value="add vue" />
+    <MESSAGE value="前后端整合后拦截器" />
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="361" y="78" key="#Assign_Data_Sources" timestamp="1578647796966">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="361" y="78" key="#Assign_Data_Sources/0.0.1536.834/1920.0.1920.1050@0.0.1536.834" timestamp="1578647796966" />
+    <state x="475" y="92" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1578648210231">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="475" y="92" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.834/1920.0.1920.1050@0.0.1536.834" timestamp="1578648210231" />
+    <state x="574" y="125" key="#com.intellij.ide.util.MemberChooser" timestamp="1578886732642">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="574" y="125" key="#com.intellij.ide.util.MemberChooser/0.0.1536.834/1920.0.1920.1050@0.0.1536.834" timestamp="1578886732641" />
+    <state x="499" y="197" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1578899578047">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="499" y="197" key="#com.intellij.ide.util.PackageChooserDialog/0.0.1536.834/1920.0.1920.1050@0.0.1536.834" timestamp="1578899578047" />
+    <state x="553" y="283" width="429" height="273" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1578901488659">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="553" y="283" width="429" height="273" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1536.834/1920.0.1920.1050@0.0.1536.834" timestamp="1578901488659" />
+    <state x="496" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1578884694071">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="496" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1536.834/1920.0.1920.1050@0.0.1536.834" timestamp="1578884694071" />
+    <state x="364" y="15" key="CommitChangelistDialog2" timestamp="1578902726697">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="364" y="15" key="CommitChangelistDialog2/0.0.1536.834/1920.0.1920.1050@0.0.1536.834" timestamp="1578902726697" />
+    <state x="449" y="225" key="DUMP_DIALOG_DIMENSION_KEY" timestamp="1578646006403">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="449" y="225" key="DUMP_DIALOG_DIMENSION_KEY/0.0.1536.834/1920.0.1920.1050@0.0.1536.834" timestamp="1578646006403" />
+    <state x="549" y="175" key="FileChooserDialogImpl" timestamp="1578623859541">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="549" y="175" key="FileChooserDialogImpl/0.0.1536.834/1920.0.1920.1050@0.0.1536.834" timestamp="1578623859541" />
+    <state width="1493" height="128" key="GridCell.Tab.0.bottom" timestamp="1578902624787">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="128" key="GridCell.Tab.0.bottom/0.0.1536.834/1920.0.1920.1050@0.0.1536.834" timestamp="1578902624787" />
+    <state width="1493" height="371" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1577934160034" />
+    <state width="1493" height="128" key="GridCell.Tab.0.center" timestamp="1578902624787">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="128" key="GridCell.Tab.0.center/0.0.1536.834/1920.0.1920.1050@0.0.1536.834" timestamp="1578902624787" />
+    <state width="1493" height="371" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1577934160034" />
+    <state width="1493" height="128" key="GridCell.Tab.0.left" timestamp="1578902624787">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="128" key="GridCell.Tab.0.left/0.0.1536.834/1920.0.1920.1050@0.0.1536.834" timestamp="1578902624787" />
+    <state width="1493" height="371" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1577934160034" />
+    <state width="1493" height="128" key="GridCell.Tab.0.right" timestamp="1578902624787">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="128" key="GridCell.Tab.0.right/0.0.1536.834/1920.0.1920.1050@0.0.1536.834" timestamp="1578902624787" />
+    <state width="1493" height="371" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1577934160034" />
+    <state width="1493" height="128" key="GridCell.Tab.1.bottom" timestamp="1578902624787">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="128" key="GridCell.Tab.1.bottom/0.0.1536.834/1920.0.1920.1050@0.0.1536.834" timestamp="1578902624787" />
+    <state width="1493" height="371" key="GridCell.Tab.1.bottom/0.0.1536.834@0.0.1536.834" timestamp="1577934160034" />
+    <state width="1493" height="128" key="GridCell.Tab.1.center" timestamp="1578902624787">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="128" key="GridCell.Tab.1.center/0.0.1536.834/1920.0.1920.1050@0.0.1536.834" timestamp="1578902624787" />
+    <state width="1493" height="371" key="GridCell.Tab.1.center/0.0.1536.834@0.0.1536.834" timestamp="1577934160034" />
+    <state width="1493" height="128" key="GridCell.Tab.1.left" timestamp="1578902624787">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="128" key="GridCell.Tab.1.left/0.0.1536.834/1920.0.1920.1050@0.0.1536.834" timestamp="1578902624787" />
+    <state width="1493" height="371" key="GridCell.Tab.1.left/0.0.1536.834@0.0.1536.834" timestamp="1577934160034" />
+    <state width="1493" height="128" key="GridCell.Tab.1.right" timestamp="1578902624787">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="128" key="GridCell.Tab.1.right/0.0.1536.834/1920.0.1920.1050@0.0.1536.834" timestamp="1578902624787" />
+    <state width="1493" height="371" key="GridCell.Tab.1.right/0.0.1536.834@0.0.1536.834" timestamp="1577934160034" />
+    <state width="1493" height="158" key="GridCell.Tab.2.bottom" timestamp="1578652306493">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="158" key="GridCell.Tab.2.bottom/0.0.1536.834/1920.0.1920.1050@0.0.1536.834" timestamp="1578652306493" />
+    <state width="1493" height="158" key="GridCell.Tab.2.center" timestamp="1578652306493">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="158" key="GridCell.Tab.2.center/0.0.1536.834/1920.0.1920.1050@0.0.1536.834" timestamp="1578652306493" />
+    <state width="1493" height="158" key="GridCell.Tab.2.left" timestamp="1578652306493">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="158" key="GridCell.Tab.2.left/0.0.1536.834/1920.0.1920.1050@0.0.1536.834" timestamp="1578652306493" />
+    <state width="1493" height="158" key="GridCell.Tab.2.right" timestamp="1578652306493">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="158" key="GridCell.Tab.2.right/0.0.1536.834/1920.0.1920.1050@0.0.1536.834" timestamp="1578652306493" />
+    <state width="212" height="477" key="HiddenNamespacesPopup" timestamp="1578645959861">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="212" height="477" key="HiddenNamespacesPopup/0.0.1536.834/1920.0.1920.1050@0.0.1536.834" timestamp="1578645959861" />
+    <state x="272" y="0" key="SettingsEditor" timestamp="1578899120442">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="272" y="0" key="SettingsEditor/0.0.1536.834/1920.0.1920.1050@0.0.1536.834" timestamp="1578899120442" />
+    <state x="361" y="153" key="Vcs.Push.Dialog.v2" timestamp="1578630631690">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="361" y="153" key="Vcs.Push.Dialog.v2/0.0.1536.834/1920.0.1920.1050@0.0.1536.834" timestamp="1578630631690" />
+    <state x="565" y="197" key="chooseDestDirectoryDialog" timestamp="1578559366352">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="565" y="197" key="chooseDestDirectoryDialog/0.0.1536.834/1920.0.1920.1050@0.0.1536.834" timestamp="1578559366352" />
+    <state x="564" y="335" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1578885562078">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="564" y="335" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1536.834/1920.0.1920.1050@0.0.1536.834" timestamp="1578885562078" />
+    <state x="759" y="118" key="com.intellij.testIntegration.createTest.CreateTestDialog" timestamp="1578901121991">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="759" y="118" key="com.intellij.testIntegration.createTest.CreateTestDialog/0.0.1536.834/1920.0.1920.1050@0.0.1536.834" timestamp="1578901121991" />
+    <state x="799" y="118" key="extract.method.dialog" timestamp="1578888674966">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="799" y="118" key="extract.method.dialog/0.0.1536.834/1920.0.1920.1050@0.0.1536.834" timestamp="1578888674966" />
+    <state x="486" y="228" key="jetbrains.nodejs.interpreters-dialog" timestamp="1577429046241">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="486" y="228" key="jetbrains.nodejs.interpreters-dialog/0.0.1536.834/1920.0.1920.1050@0.0.1536.834" timestamp="1577429046241" />
+    <state x="178" y="124" key="new project wizard" timestamp="1577429077763">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="178" y="124" key="new project wizard/0.0.1536.834/1920.0.1920.1050@0.0.1536.834" timestamp="1577429077763" />
+    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup" timestamp="1578901430458">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="431" y="155" width="672" height="678" key="search.everywhere.popup/0.0.1536.834/1920.0.1920.1050@0.0.1536.834" timestamp="1578901430458" />
+  </component>
+</project>

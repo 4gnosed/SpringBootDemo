@@ -3,9 +3,9 @@
 <mapper namespace="com.gnosed.demo.mapper.UserMapper">
 
     <resultMap id="BaseResultMap" type="com.gnosed.demo.pojo.User">
-        <id column="id" property="id" />
-        <result column="username" property="username" />
-        <result column="password" property="password" />
+        <id column="id" property="id"/>
+        <result column="username" property="username"/>
+        <result column="password" property="password"/>
     </resultMap>
 
 </mapper>

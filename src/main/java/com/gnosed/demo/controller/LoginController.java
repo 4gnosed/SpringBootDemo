@@ -22,12 +22,12 @@ public class LoginController {
      * @return
      */
     @CrossOrigin
-    @PostMapping(value = "api/login")
+    @PostMapping(value = "/api/login")
     @ResponseBody
     public Result login(@RequestBody User requestUser, HttpSession session) {
         String username = requestUser.getUsername();
         String password = requestUser.getPassword();
-        User user = IUserService.get(username, password);
+        User user = IUserService.list(username, password);
 
         if (user != null) {
             //保持登录状态

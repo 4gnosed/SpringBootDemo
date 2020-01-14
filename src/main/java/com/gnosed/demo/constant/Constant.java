@@ -6,4 +6,5 @@ public class Constant {
     public static final String USERNAME = "username";
     public static final String PASSWORD = "password";
     public static final String CID = "cid";
+    public static final String IMG_FOLDER = "F:/MyCode/IdeaProjects/_file/img/";
 }

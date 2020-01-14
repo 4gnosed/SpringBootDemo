@@ -6,14 +6,17 @@ import com.gnosed.demo.pojo.Category;
 import com.gnosed.demo.service.IBookeService;
 import com.gnosed.demo.service.ICategoryService;
 import com.gnosed.demo.util.EntityTransfer;
+import com.gnosed.demo.util.FileUploadUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
+import javax.servlet.http.HttpServletRequest;
 import java.util.ArrayList;
 import java.util.List;
 
 @RestController
-public class LibraryController {
+public class LibraryController extends AbstractController {
 
     @Autowired
     private IBookeService iBookeService;
@@ -48,6 +51,17 @@ public class LibraryController {
         }
     }
 
+    @PostMapping("/api/covers")
+    public String coversUpload(MultipartFile file, HttpServletRequest request) {
+        return FileUploadUtil.upload(file,request);
+    }
+
+    /**
+     * pojo转换到dto
+     *
+     * @param bookList
+     * @return
+     */
     private ArrayList<BookDto> transferBook(List<Book> bookList) {
         ArrayList<BookDto> bookDtos = new ArrayList<>();
         for (Book book : bookList) {
@@ -56,4 +70,5 @@ public class LibraryController {
         }
         return bookDtos;
     }
+
 }

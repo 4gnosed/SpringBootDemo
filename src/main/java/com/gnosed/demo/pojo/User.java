@@ -12,4 +12,6 @@ public class User {
     int id;
     private String username;
     private String password;
+    private String salt;
+    private boolean enabled;
 }

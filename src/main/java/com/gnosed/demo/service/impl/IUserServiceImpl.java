@@ -26,7 +26,7 @@ public class IUserServiceImpl extends ServiceImpl<UserMapper, User> implements I
     }
 
     @Override
-    public User listByName(String username) {
+    public User getByName(String username) {
         QueryWrapper<User> queryWrapper = new QueryWrapper<User>();
         queryWrapper.eq(Constant.USERNAME, username);
         return getUser(username, queryWrapper);
@@ -36,7 +36,7 @@ public class IUserServiceImpl extends ServiceImpl<UserMapper, User> implements I
     public boolean add(User user) {
         ExceptionUtil.notNull(user, "User must be not null");
         String username = user.getUsername();
-        if (listByName(username) == null) {
+        if (getByName(username) == null) {
             return save(user);
         }
         return false;
@@ -51,5 +51,16 @@ public class IUserServiceImpl extends ServiceImpl<UserMapper, User> implements I
             log.error("getByName获取到多个User，username={}", username);
         }
         return list.get(0);
+    }
+
+    @Override
+    public boolean isExist(String username) {
+        QueryWrapper<User> queryWrapper = new QueryWrapper<>();
+        queryWrapper.eq(Constant.USERNAME, username);
+        List<User> list = list(queryWrapper);
+        if (list.size() != 0) {
+            return true;
+        }
+        return false;
     }
 }

@@ -7,4 +7,6 @@ import lombok.Data;
 @AllArgsConstructor
 public class Result {
     private int code;
+    private String message;
+    private Object data;
 }

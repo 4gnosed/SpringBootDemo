@@ -6,7 +6,9 @@ import com.gnosed.demo.pojo.User;
 public interface IUserService extends IService<User> {
     User list(String username, String password);
 
-    User listByName(String username) ;
+    User getByName(String username) ;
 
     boolean add(User user);
+
+    boolean isExist(String username);
 }

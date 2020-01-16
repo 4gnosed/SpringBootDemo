@@ -40,4 +40,11 @@ public class IBookeServiceImpl extends ServiceImpl<BookMapper, Book> implements 
         queryWrapper.eq(Constant.CID, cid);
         return list(queryWrapper);
     }
+
+    @Override
+    public List<Book> listByKeyword(String keywords) {
+        QueryWrapper<Book> queryWrapper = new QueryWrapper<>();
+        queryWrapper.like(Constant.TITLE, keywords).or().like(Constant.AUTHOR, keywords);
+        return list(queryWrapper);
+    }
 }

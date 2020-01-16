@@ -12,4 +12,6 @@ public interface IBookeService {
     void delete(Book book);
 
     List<Book> listByCategory(int cid);
+
+    List<Book> listByKeyword(String keywords);
 }

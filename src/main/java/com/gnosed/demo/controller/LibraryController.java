@@ -3,10 +3,12 @@ package com.gnosed.demo.controller;
 import com.gnosed.demo.dto.BookDto;
 import com.gnosed.demo.pojo.Book;
 import com.gnosed.demo.pojo.Category;
+import com.gnosed.demo.pojo.Search;
 import com.gnosed.demo.service.IBookeService;
 import com.gnosed.demo.service.ICategoryService;
 import com.gnosed.demo.util.EntityTransfer;
 import com.gnosed.demo.util.FileUploadUtil;
+import com.gnosed.demo.util.StringUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
@@ -53,7 +55,17 @@ public class LibraryController extends AbstractController {
 
     @PostMapping("/api/covers")
     public String coversUpload(MultipartFile file, HttpServletRequest request) {
-        return FileUploadUtil.upload(file,request);
+        return FileUploadUtil.upload(file, request);
+    }
+
+    @PostMapping("/api/search")
+    public List<Book> searchBooks(@RequestBody Search search) {
+        String keywords = search.getKeywords();
+        if (StringUtil.isEmpty(keywords)) {
+            return iBookeService.list();
+        } else {
+            return iBookeService.listByKeyword(keywords);
+        }
     }
 
     /**

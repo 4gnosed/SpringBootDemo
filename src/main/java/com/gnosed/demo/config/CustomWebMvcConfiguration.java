@@ -11,7 +11,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
  * @Date 2020/1/13
  */
 @Configuration
-public class CustomMVCConfiguration implements WebMvcConfigurer {
+public class CustomWebMvcConfiguration implements WebMvcConfigurer {
     /**
      * 所有请求都允许跨域
      *

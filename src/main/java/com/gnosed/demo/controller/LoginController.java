@@ -96,4 +96,17 @@ public class LoginController extends AbstractController {
         iUserService.add(user);
         return ResultFactory.buildSuccessResult(user);
     }
+
+    /**
+     * 退出登录
+     *
+     * @return
+     */
+    @GetMapping(value = "/api/logout")
+    public Result logout() {
+        Subject subject = SecurityUtils.getSubject();
+        subject.logout();
+        String message = "成功登出";
+        return ResultFactory.buildSuccessResult(message);
+    }
 }

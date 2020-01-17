@@ -76,6 +76,10 @@ public class ShiroConfiguration {
         return securityManager;
     }
 
+    /**
+     * 启用 rememberMe 机制保持登录状态
+     * @return
+     */
     public CookieRememberMeManager rememberMeManager() {
         CookieRememberMeManager cookieRememberMeManager = new CookieRememberMeManager();
         cookieRememberMeManager.setCookie(rememberMeCookie());

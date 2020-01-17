@@ -1,5 +1,6 @@
 package com.gnosed.demo.controller;
 
+import com.gnosed.demo.base.AbstractClass;
 import com.gnosed.demo.dto.BookDto;
 import com.gnosed.demo.pojo.Book;
 import com.gnosed.demo.pojo.Category;
@@ -18,7 +19,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RestController
-public class LibraryController extends AbstractController {
+public class LibraryController extends AbstractClass {
 
     @Autowired
     private IBookeService iBookeService;

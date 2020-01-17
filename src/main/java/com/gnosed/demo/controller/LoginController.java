@@ -1,5 +1,6 @@
 package com.gnosed.demo.controller;
 
+import com.gnosed.demo.base.AbstractClass;
 import com.gnosed.demo.constant.Constant;
 import com.gnosed.demo.pojo.User;
 import com.gnosed.demo.result.Result;
@@ -12,15 +13,13 @@ import org.apache.shiro.authc.UsernamePasswordToken;
 import org.apache.shiro.crypto.SecureRandomNumberGenerator;
 import org.apache.shiro.crypto.hash.SimpleHash;
 import org.apache.shiro.subject.Subject;
-import org.hibernate.validator.internal.util.logging.Log;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpSession;
-import java.util.logging.Logger;
 
 @RestController
-public class LoginController extends AbstractController {
+public class LoginController extends AbstractClass {
 
     @Autowired
     private IUserService iUserService;
@@ -54,10 +53,11 @@ public class LoginController extends AbstractController {
 
         Subject subject = SecurityUtils.getSubject();
         UsernamePasswordToken token = new UsernamePasswordToken(username, password);
+        token.setRememberMe(true);
         try {
             subject.login(token);
             return ResultFactory.buildSuccessResult(token);
-        } catch (AuthenticationException e){
+        } catch (AuthenticationException e) {
             String message = "账号或密码错误";
             return ResultFactory.buildFailResult(message);
         }
@@ -103,5 +103,11 @@ public class LoginController extends AbstractController {
         subject.logout();
         String message = "成功登出";
         return ResultFactory.buildSuccessResult(message);
+    }
+
+    @GetMapping("/api/authentication")
+    public String authentication() {
+        String message = "身份认证成功";
+        return message;
     }
 }

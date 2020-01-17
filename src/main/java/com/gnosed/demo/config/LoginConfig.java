@@ -16,7 +16,8 @@ public class LoginConfig implements WebMvcConfigurer {
 
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
-        registry.addInterceptor(getLoginInterceptor()).addPathPatterns("/*")
+        registry.addInterceptor(getLoginInterceptor())
+                .addPathPatterns("/**")
                 .excludePathPatterns("/index.html")
                 .excludePathPatterns("/api/login")
                 .excludePathPatterns("/api/logout");

@@ -52,18 +52,16 @@ public class LoginController extends AbstractController {
             return ResultFactory.buildFailResult(message);
         }
 
-        if (iUserService.getByName(username) == null) {
-            String message = "账号不存在";
-            return ResultFactory.buildFailResult(message);
-        }
-
         Subject subject = SecurityUtils.getSubject();
         UsernamePasswordToken token = new UsernamePasswordToken(username, password);
         try {
             subject.login(token);
             return ResultFactory.buildSuccessResult(token);
-        } catch (AuthenticationException e) {
+        } catch (AuthenticationException e){
             String message = "账号或密码错误";
+            return ResultFactory.buildFailResult(message);
+        }catch (NullPointerException e){
+            String message = "账号不存在";
             return ResultFactory.buildFailResult(message);
         }
     }

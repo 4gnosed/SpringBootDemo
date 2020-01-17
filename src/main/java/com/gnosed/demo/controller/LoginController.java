@@ -60,9 +60,6 @@ public class LoginController extends AbstractController {
         } catch (AuthenticationException e){
             String message = "账号或密码错误";
             return ResultFactory.buildFailResult(message);
-        }catch (NullPointerException e){
-            String message = "账号不存在";
-            return ResultFactory.buildFailResult(message);
         }
     }
 

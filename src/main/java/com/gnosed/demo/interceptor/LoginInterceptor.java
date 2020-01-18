@@ -1,9 +1,6 @@
 package com.gnosed.demo.interceptor;
 
 import com.gnosed.demo.base.AbstractClass;
-import com.gnosed.demo.pojo.User;
-import com.gnosed.demo.util.LoginInterceptorUtil;
-import org.apache.commons.lang.StringUtils;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.subject.Subject;
 import org.springframework.http.HttpMethod;
@@ -12,7 +9,6 @@ import org.springframework.web.servlet.HandlerInterceptor;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 public class LoginInterceptor extends AbstractClass implements HandlerInterceptor {
     @Override

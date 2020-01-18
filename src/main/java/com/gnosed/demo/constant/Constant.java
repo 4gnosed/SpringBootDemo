@@ -11,7 +11,7 @@ public class Constant {
     public static final String MD_5 = "md5";
     public static final int MAX_AGE = 3600;
     public static final String REMEMBER_ME = "rememberMe";
-    public static final String EVANNIGHTLY_WAOU = "EVANNIGHTLY_WAOU";
+    public static final String GNOSED_CIPHER_KEY = "GNOSED_CIPHERKEY";
     public static final String TITLE = "title";
     public static final String AUTHOR = "author";
 }

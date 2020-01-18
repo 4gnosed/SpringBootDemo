@@ -13,11 +13,6 @@ import org.apache.shiro.web.servlet.SimpleCookie;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import javax.servlet.Filter;
-import java.util.HashMap;
-import java.util.LinkedHashMap;
-import java.util.Map;
-
 /**
  * @Author Gnosed Lu
  * @Date 2020/1/16
@@ -28,6 +23,56 @@ public class ShiroConfiguration {
     @Bean
     public static LifecycleBeanPostProcessor getLifecycleBeanProcessor() {
         return new LifecycleBeanPostProcessor();
+    }
+
+    @Bean
+    public SecurityManager securityManager() {
+        DefaultWebSecurityManager securityManager = new DefaultWebSecurityManager();
+        securityManager.setRealm(getRealm());
+        securityManager.setRememberMeManager(rememberMeManager());
+        return securityManager;
+    }
+
+    /**
+     * 启用 rememberMe 机制保持登录状态
+     *
+     * @return
+     */
+    public CookieRememberMeManager rememberMeManager() {
+        CookieRememberMeManager cookieRememberMeManager = new CookieRememberMeManager();
+        cookieRememberMeManager.setCookie(rememberMeCookie());
+        cookieRememberMeManager.setCipherKey(Constant.GNOSED_CIPHER_KEY.getBytes());
+        return cookieRememberMeManager;
+    }
+
+    @Bean
+    public SimpleCookie rememberMeCookie() {
+        SimpleCookie simpleCookie = new SimpleCookie(Constant.REMEMBER_ME);
+        simpleCookie.setMaxAge(Constant.MAX_AGE);
+        return simpleCookie;
+    }
+
+    @Bean
+    public CustomAuthorizingRealm getRealm() {
+        CustomAuthorizingRealm realm = new CustomAuthorizingRealm();
+        realm.setCredentialsMatcher(hashedCredentialsMatcher());
+        return realm;
+    }
+
+    /**
+     * 凭证匹配器
+     * （由于我们的密码校验交给Shiro的SimpleAuthenticationInfo进行处理了
+     * 所以我们需要修改下doGetAuthenticationInfo中的代码;
+     * ）
+     *
+     * @return
+     */
+    @Bean
+    public HashedCredentialsMatcher hashedCredentialsMatcher() {
+        HashedCredentialsMatcher hashedCredentialsMatcher = new HashedCredentialsMatcher();
+        hashedCredentialsMatcher.setHashAlgorithmName(Constant.MD_5);
+        hashedCredentialsMatcher.setHashIterations(Constant.HASH_ITERATIONS);
+        return hashedCredentialsMatcher;
     }
 
     /**
@@ -66,55 +111,6 @@ public class ShiroConfiguration {
 
     public URLPathMatchingFilter getURLPathMatchingFilter() {
         return new URLPathMatchingFilter();
-    }
-
-    @Bean
-    public SecurityManager securityManager() {
-        DefaultWebSecurityManager securityManager = new DefaultWebSecurityManager();
-        securityManager.setRealm(getRealm());
-        securityManager.setRememberMeManager(rememberMeManager());
-        return securityManager;
-    }
-
-    /**
-     * 启用 rememberMe 机制保持登录状态
-     * @return
-     */
-    public CookieRememberMeManager rememberMeManager() {
-        CookieRememberMeManager cookieRememberMeManager = new CookieRememberMeManager();
-        cookieRememberMeManager.setCookie(rememberMeCookie());
-        cookieRememberMeManager.setCipherKey(Constant.EVANNIGHTLY_WAOU.getBytes());
-        return cookieRememberMeManager;
-    }
-
-    @Bean
-    public SimpleCookie rememberMeCookie() {
-        SimpleCookie simpleCookie = new SimpleCookie(Constant.REMEMBER_ME);
-        simpleCookie.setMaxAge(Constant.MAX_AGE);
-        return simpleCookie;
-    }
-
-    @Bean
-    public CustomAuthorizingRealm getRealm() {
-        CustomAuthorizingRealm realm = new CustomAuthorizingRealm();
-        realm.setCredentialsMatcher(hashedCredentialsMatcher());
-        return realm;
-    }
-
-    /**
-     * 凭证匹配器
-     * （由于我们的密码校验交给Shiro的SimpleAuthenticationInfo进行处理了
-     * 所以我们需要修改下doGetAuthenticationInfo中的代码;
-     * ）
-     *
-     * @return
-     */
-    @Bean
-    public HashedCredentialsMatcher hashedCredentialsMatcher() {
-        HashedCredentialsMatcher hashedCredentialsMatcher = new HashedCredentialsMatcher();
-        hashedCredentialsMatcher.setHashAlgorithmName(Constant.MD_5);
-        hashedCredentialsMatcher.setHashIterations(Constant.HASH_ITERATIONS);
-        return hashedCredentialsMatcher;
     }
 
     /**

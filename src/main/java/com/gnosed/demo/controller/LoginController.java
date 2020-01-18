@@ -1,5 +1,5 @@
 package com.gnosed.demo.controller;
-
+import com.baomidou.mybatisplus.extension.service.IService;
 import com.gnosed.demo.base.AbstractClass;
 import com.gnosed.demo.constant.Constant;
 import com.gnosed.demo.pojo.User;

@@ -1,7 +1,5 @@
 package com.gnosed.demo.result;
 
-import com.gnosed.demo.pojo.User;
-
 /**
  * @Author Gnosed Lu
  * @Date 2020/1/16
@@ -12,7 +10,7 @@ public class ResultFactory {
     }
 
     public static Result buildFailResult(String message) {
-        return buildResult(ResultCode.FAIL, "失败", null);
+        return buildResult(ResultCode.FAIL, message, null);
     }
 
     public static Result buildResult(int resultCode, String message, Object data) {

@@ -1,7 +1,7 @@
 package com.gnosed.demo.config;
 
 import com.gnosed.demo.constant.Constant;
-import com.gnosed.demo.interceptor.LoginInterceptor;
+import com.gnosed.demo.interceptor.CustomInterceptor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
@@ -42,8 +42,8 @@ public class CustomWebMvcConfiguration implements WebMvcConfigurer {
     }
 
     @Bean
-    public LoginInterceptor getLoginInterceptor() {
-        return new LoginInterceptor();
+    public CustomInterceptor getInterceptor() {
+        return new CustomInterceptor();
     }
 
     /**
@@ -53,7 +53,7 @@ public class CustomWebMvcConfiguration implements WebMvcConfigurer {
      */
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
-        registry.addInterceptor(getLoginInterceptor())
+        registry.addInterceptor(getInterceptor())
                 .addPathPatterns("/**")
                 .excludePathPatterns("/index.html")
                 .excludePathPatterns("/api/login")

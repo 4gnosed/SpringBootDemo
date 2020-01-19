@@ -1,6 +1,7 @@
 package com.gnosed.demo.interceptor;
 
 import com.gnosed.demo.base.AbstractClass;
+import com.gnosed.demo.result.ResultFactory;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.subject.Subject;
 import org.springframework.http.HttpMethod;
@@ -10,7 +11,7 @@ import org.springframework.web.servlet.HandlerInterceptor;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-public class LoginInterceptor extends AbstractClass implements HandlerInterceptor {
+public class CustomInterceptor extends AbstractClass implements HandlerInterceptor {
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
         //原生地通过url拦截
@@ -33,12 +34,18 @@ public class LoginInterceptor extends AbstractClass implements HandlerIntercepto
             response.setStatus(HttpStatus.NO_CONTENT.value());
             return true;
         }
+        String requestURI = request.getRequestURI();
         //使用 shiro 验证
         Subject subject = SecurityUtils.getSubject();
         if (!subject.isAuthenticated() && !subject.isRemembered()) {
-            logger.info("身份认证失败");
+            String message = "身份认证失败";
+            logger.error(message);
+            ResultFactory.returnUnauthorizedJson(response, message);
             return false;
         }
+        String message = "身份认证通过";
+        logger.info(message);
         return true;
     }
+
 }

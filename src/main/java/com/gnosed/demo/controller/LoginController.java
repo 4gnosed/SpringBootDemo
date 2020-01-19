@@ -1,4 +1,5 @@
 package com.gnosed.demo.controller;
+
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.gnosed.demo.base.AbstractClass;
 import com.gnosed.demo.constant.Constant;
@@ -106,8 +107,6 @@ public class LoginController extends AbstractClass {
     }
 
     @GetMapping("/api/authentication")
-    public String authentication() {
-        String message = "身份认证成功";
-        return message;
+    public void authentication() {
     }
 }
